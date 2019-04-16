@@ -155,7 +155,8 @@ y = tf.placeholder(tf.float32, [None, num_time_steps, num_outputs])
 # ____
 # ### RNN Cell Layer
 # 
-# Play around with the various cells in this section, compare how they perform against each other.
+# Play around with the various cells in this section, compare how they perform against each other. One can use various learning rates, iterations 
+#Also play around with the activation function. 
 
 # In[14]:
 
@@ -233,7 +234,7 @@ init = tf.global_variables_initializer()
 # In[24]:
 
 
-# ONLY FOR GPU USERS:
+# FOR GPU USERS:
 # https://stackoverflow.com/questions/34199233/how-to-prevent-tensorflow-from-allocating-the-totality-of-a-gpu-memory
 gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.75)
 
@@ -343,4 +344,4 @@ plt.plot(ts_data.x_data[:num_time_steps],training_instance[:num_time_steps], "r-
 plt.xlabel("Time")
 
 
-# # Great Job!
+
